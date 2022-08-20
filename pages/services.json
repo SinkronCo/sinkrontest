@@ -1,0 +1,64 @@
+{
+  "services": [
+    {
+      "id": "3",
+      "title": "Web Design",
+      "description": [
+        "ERP/CRM/LM Systems",
+        "E-commerce Systems",
+        "Analytics and Dashboards",
+        "Custome Admin Panels",
+        "Online Presence"
+      ],
+      "icon": "ri-window-line"
+    },
+
+    {
+      "id": "05f6299a-ebed-4bc2-b5ab-584ebd8787cc",
+      "title": "App development",
+      "description": [
+        "Android/IOS App",
+        "CRM Systems",
+        "Test Driven Development",
+        "Delivery Apps/E-commerce",
+        "Play Store/App Store"
+      ],
+      "icon": "ri-device-line"
+    },
+    {
+      "id": "2d624604-dfd0-47fb-97ea-579a4fe7801f",
+      "title": "Databases/Clouds",
+      "description": [
+        "AWS Cloud Computing",
+        "Google Cloud",
+        "Azure",
+        "Document Databases",
+        "SQL Databases"
+      ],
+      "icon": "ri-database-2-line"
+    },
+    {
+      "id": "2",
+      "title": "Branding",
+      "description": [
+        "UI/UX Designing",
+        "Logo & Social Media",
+        "Graphics",
+        "Product Designing",
+        "3D Modelling"
+      ],
+      "icon": "ri-group-line"
+    },
+    {
+      "id": "4",
+      "title": "Digital Marketing",
+      "description": [
+        "Brand Recognition",
+        "Profile Management",
+        "Social Media Marketing",
+        "Marketing Campaigns"
+      ],
+      "icon": "ri-line-chart-line"
+    }
+  ]
+}

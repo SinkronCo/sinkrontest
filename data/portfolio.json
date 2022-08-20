@@ -1,37 +1,32 @@
 {
-  "name": "Chetan",
-  "headerTaglineOne": "Hello 👋",
-  "headerTaglineTwo": "I'm Chetan Verma - curious",
-  "headerTaglineThree": "designer and devloper",
-  "headerTaglineFour": " based in New Delhi, India.",
-  "showBlog": true,
+  "name": "Sinkron",
+  "headerTaglineOne": "UI/UX Development",
+  "headerTaglineTwo": "Business & Software Consulting",
+  "headerTaglineThree": "Software Recruiting",
+  "headerTaglineFour": " Custom Software & Mobile App Development.",
+  "showBlog": false,
   "socials": [
-    {
-      "id": "1",
-      "title": "Github",
-      "link": "https://github.com/chetanverma16"
-    },
     {
       "id": "2",
       "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/chetanverma7/"
+      "link": "https://www.linkedin.com/company/sinrkon-pvt-ltd/"
     },
     {
       "id": "3",
       "title": "Twitter",
-      "link": "https://twitter.com/realchetanverma"
+      "link": "#"
     },
-    { "id": "4", "title": "Blog", "link": "https://blog.chetanverma.com/" },
-    { "id": "5", "title": "Email", "link": "mailto:hello@chetanverma.com" }
+    { "id": "4", "title": "Email", "link": "mailto:info@sinkron.co" }
   ],
   "projects": [
     {
       "id": "1",
       "title": "Project One Test",
       "description": "Web Design",
-      "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "imageSrc": " https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
       "url": "http://chetanverma.com/"
     },
+
     {
       "id": "2",
       "title": "Project Two",
@@ -70,19 +65,16 @@
   ],
   "services": [
     {
-      "id": "1",
-      "title": "Art Direction",
-      "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
-    },
-    {
       "id": "2",
       "title": "Branding",
-      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors.",
+      "icon": "ri-group-line"
     },
     {
       "id": "3",
       "title": "Web Design",
-      "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+      "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel.",
+      "icon": "ri-window-line"
     },
     {
       "id": "4",
@@ -92,8 +84,32 @@
     {
       "id": "05f6299a-ebed-4bc2-b5ab-584ebd8787cc",
       "title": "New Service",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      "icon": "ri-device-line"
+    },
+    {
+      "id": "2d624604-dfd0-47fb-97ea-579a4fe7801f",
+      "title": "New Service",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      "icon": "ri-database-2-line"
     }
   ],
-  "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  "content": [
+    {
+      "id": "1",
+      "title": " Fresh Design",
+      "description": "We combine creative design and technical skills to build striking 3D visualisations.We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+    },
+    {
+      "id": "2",
+      "title": "Clean Code",
+      "description": "Even bad code can function.Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way. We create custom code that is very clean, is easy to make changes into."
+    },
+    {
+      "id": "3",
+      "title": "Online Presence",
+      "description": "We build and optimize your online presence for customers to easily find you.Website is the digital entry point into your business and a powerful revenue channel, which are built with utmost care to quality and usability."
+    }
+  ],
+  "aboutpara": "Sinkron is an US/Pakistan based software consulting firm focused on building custom web, mobile and enterprise applications. Our team has expertise in all phases of software development cycles from gathering requirements to launching and providing ongoing support. We have built applications for healthcare, banking, finance and the auto industry using custom tools and technologies, data science and smart predictive algorithms. We are committed to providing services to clients in software development, software consulting and software recruiting. Contact us for all of your software needs. We help clients across the globe (including USA, Europe, Australia, Asia, and UAE) pursue their digital transformation goals through smart Software Development, discovery workshops, and remote teams."
 }

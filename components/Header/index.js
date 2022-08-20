@@ -5,6 +5,7 @@ import { Popover } from "@headlessui/react";
 import { useTheme } from "next-themes";
 // Local Data
 import data from "../../data/portfolio.json";
+import Image from "next/image";
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
@@ -16,28 +17,37 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   }, []);
   return (
     <>
-      <Popover className="block tablet:hidden mt-5">
+      <Popover className="block tablet:hidden">
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
+              <Image
+                alt="Logo"
                 onClick={() => router.push("/")}
-                className="font-medium cursor-pointer p-2 laptop:p-0"
-              >
-                {data.name}.
-              </h1>
+                // className="w-52"
+                width="255px"
+                height="155px"
+                src={"/images/sinkron.png"}
+              />
               <div className="flex items-center">
                 <Button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 >
-                  <img
+                  <Image
+                    alt="Change Theme"
                     className="h-6"
+                    // layout="fill"
+                    width="45px"
+                    height="25px"
                     src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                  ></img>
+                  ></Image>
                 </Button>
                 <Popover.Button>
-                  <img
+                  <Image
+                    alt=""
                     className="h-5"
+                    width="40px"
+                    height="25px"
                     src={`/images/${
                       !open
                         ? theme === "dark"
@@ -47,100 +57,62 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         ? "cancel.svg"
                         : "cancel-white.svg"
                     }`}
-                  ></img>
+                  ></Image>
                 </Popover.Button>
               </div>
             </div>
             <Popover.Panel
+              style={{ zIndex: "999" }}
               className={`absolute right-0 z-10 w-11/12 p-4 ${
                 theme === "dark" ? "bg-slate-800" : "bg-white"
               } shadow-md rounded-md`}
             >
-              {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
+                  <Button onClick={handleWorkScroll}>Services</Button>
                   <Button onClick={handleAboutScroll}>About</Button>
                   {data.showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
+                  <Button onClick={() => window.open("mailto:info@sinkron.co")}>
                     Contact
                   </Button>
                 </div>
-              ) : (
-                <div className="grid grid-cols-1">
-                  <Button onClick={() => router.push("/")} classes="first:ml-1">
-                    Home
-                  </Button>
-                  {data.showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
-                </div>
-              )}
             </Popover.Panel>
           </>
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${
+        className={` hidden flex-row items-center justify-between sticky ${
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
-        <h1
+        <Image
+          alt="Logo"
           onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
-        >
-          {data.name}.
-        </h1>
-        {!isBlog ? (
-          <div className="flex">
-            <Button onClick={handleWorkScroll}>Work</Button>
-            <Button onClick={handleAboutScroll}>About</Button>
-            {data.showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
+          width="300px"
+          height="182px"
+          src={"/images/sinkron.png"}
+        />
+        <div className="flex">
+          <Button onClick={handleWorkScroll}>Work</Button>
+          <Button onClick={handleAboutScroll}>About</Button>
+          <Button onClick={() => window.open("mailto:info@sinkron.co")}>
+            Contact
+          </Button>
+          {mounted && theme && (
+            <Button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              <Image
+                alt=""
+                width="40px"
+                height="25px"
+                className="h-6"
+                src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+              ></Image>
             </Button>
-            {mounted && theme && (
-              <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
-              </Button>
-            )}
-          </div>
-        ) : (
-          <div className="flex">
-            <Button onClick={() => router.push("/")}>Home</Button>
-            {data.showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
-            </Button>
-            {mounted && theme && (
-              <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                <img
-                  className="h-6"
-                  src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
-              </Button>
-            )}
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </>
   );
